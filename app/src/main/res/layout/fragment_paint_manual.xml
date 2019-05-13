@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<br.com.franklin.ikigai_app.DoodleViewManual
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/doodleViewManual"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</br.com.franklin.ikigai_app.DoodleViewManual>

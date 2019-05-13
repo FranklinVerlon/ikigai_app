@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Ikigai App</string>
+    <string name="msg_home">Welcome to Draw Your Ikigai</string>
+    <string name="bt_start">Automatic Drowing</string>
+    <string name="bt_tip">Learn About Ikigai</string>
+    <string name="about_ikigai">Ikigai (生き甲斐, pronounced [ikiɡai]) is a Japanese concept that means "a reason for being." The word "ikigai" is usually used to indicate the source of value in one\'s life or the things that make one\'s life worthwhile. The word translated to English roughly means "thing that you live for" or "the reason for which you wake up in the morning." Each individual\'s ikigai is personal to them and specific to their lives, values and beliefs. It reflects the inner self of an individual and expresses that faithfully, while simultaneously creating a mental state in which the individual feels at ease. Activities that allow one to feel ikigai are never forced on an individual; they are often spontaneous, and always undertaken willingly, giving the individual satisfaction and a sense of meaning to life</string>
+    <string name="question">What\'s Ikigai?</string>
+    <string name="message_choice">Draw circles manual or automatic ?</string>
+    <string name="bt_start_m">Manual Drowing</string>
+    <string name="toobar_title">Draw Your Ikigai</string>
+
+    <string name="Chave">Valor</string>
+    <string name="button_erase">Erase Image</string>
+    <string name="button_set_color">Set Color</string>
+    <string name="button_set_line_width">Set Line Width</string>
+    <string name="line_imageview_description">This displays the line thickness</string>
+    <string name="label_alpha">Alpha</string>
+    <string name="label_red">Red</string>
+    <string name="label_green">Green</string>
+    <string name="label_blue">Blue</string>
+    <string name="menuitem_color">Color</string>
+    <string name="menuitem_delete">Erase Drawing</string>
+    <string name="menuitem_line_width">Line Width</string>
+    <string name="menuitem_save">Save</string>
+    <string name="menuitem_print">Print</string>
+    <string name="message_erase">Erase de drawing?</string>
+    <string name="message_error_saving">There was an error saving the imager</string>
+    <string name="message_saved">Your saved painting can be viewed in thePhotos app by selecting Device Foldersfrom that app\’s menu</string>
+    <string name="message_error_printing">Your device does not support printing</string>
+    <string name="permission_explanation">To save an image, the app requirespermission to write to external storage</string>
+    <string name="title_color_dialog">Choose  Color</string>
+    <string name="title_line_width_dialog">Choose Line Width</string>
+
+</resources>
