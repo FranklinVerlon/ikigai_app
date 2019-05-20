@@ -10,6 +10,7 @@ import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 
@@ -27,6 +28,7 @@ public class DoodleView extends View {
     private final Paint paintLine; //Para fazer as linhas
     private final Map<Integer, Path> pathMap = new HashMap<>(); //mapa dos paths atualmente sendo desenhados
     private final  Map <Integer, Point> previousPointMap = new HashMap<>(); //mapa que armazena o último ponto em cada path
+    public Point point;
 
     ArrayList<Path> paths = new ArrayList<Path>();
     private  int choice;
@@ -111,12 +113,12 @@ public class DoodleView extends View {
         compositeCanvas.drawText("What you can be", x/2 - 80, y/ 2 + 350, paintPincel2);
         compositeCanvas.drawText("PAID FOR", x/2 - 80, y/ 2 + 400, paintPincel);
 
-        //paint.setColor(Color.argb(255,0,255,0));
+
         compositeCanvas.drawCircle(x / 2 - 200, y / 2, 300, setColorPaint(paint));
         compositeCanvas.drawText("what you are", x/2 - 480, y/ 2 - 50, paintPincel2);
         compositeCanvas.drawText("GOOD AT", x/2 - 480, y/ 2, paintPincel);
 
-        //paint.setColor(Color.argb(255,255,0,0));
+
         compositeCanvas.drawCircle(x / 2 + 200, y / 2, 300, setColorPaint(paint));
         compositeCanvas.drawText("What the world", x/2 + 300, y/ 2 - 50, paintPincel2);
         compositeCanvas.drawText("NEEDS", x/2 + 300, y/ 2, paintPincel);
@@ -140,5 +142,48 @@ public class DoodleView extends View {
         paint.setColor(Color.argb(255, r, g, b));
         return paint;
     }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int action = event.getActionMasked();
+        int actionIndex = event.getActionIndex();
+
+        if (action == MotionEvent.ACTION_DOWN || action == MotionEvent.ACTION_POINTER_DOWN) {
+            touchStarted(event.getX(actionIndex),
+                    event.getY(actionIndex),
+                    event.getPointerId(actionIndex)
+            );
+
+        }
+
+
+        invalidate();
+        return true;
+    }
+
+    private void touchStarted (float x, float y, int lineId){
+        Path path;
+      //  Point point;
+        if (pathMap.containsKey(lineId)) {
+            path = pathMap.get(lineId);
+            path.reset();
+            ;
+            point = previousPointMap.get(lineId);
+
+        }
+        else{
+            path = new Path();
+            pathMap.put(lineId, path);
+            point = new Point();
+            previousPointMap.put(lineId, point);
+
+        }
+        path.moveTo(x, y);
+        point.x = (int) x;
+        point.y = (int) y;
+
+    }
+
 
 }
