@@ -23,12 +23,23 @@
     <string name="menuitem_line_width">Line Width</string>
     <string name="menuitem_save">Save</string>
     <string name="menuitem_print">Print</string>
-    <string name="message_erase">Erase de drawing?</string>
+    <string name="message_erase">Erase your drawing?</string>
     <string name="message_error_saving">There was an error saving the imager</string>
     <string name="message_saved">Your saved painting can be viewed in thePhotos app by selecting Device Foldersfrom that app\’s menu</string>
     <string name="message_error_printing">Your device does not support printing</string>
     <string name="permission_explanation">To save an image, the app requirespermission to write to external storage</string>
     <string name="title_color_dialog">Choose  Color</string>
     <string name="title_line_width_dialog">Choose Line Width</string>
+
+    <string name="isIkigai">is an Ikigai</string>
+    <string name="isNotIkigai1">It is not an ikigai. Because has no intersection between the circle </string>
+    <string name="isNotIkigai2">and circle </string>
+    <string name="ok">Ok</string>
+    <string name="information">The Ikigai drawing should contain 4 intersecting circles.
+    \nWhen drawing a circle, do not remove your finger from the screen until drawing is complete
+    (every circle is considered complete from the moment you remove your finger from the screen, Any different shape of a circle will be treated as a circle)
+    \nAfter the 4 circles have been finalized, the ikigai check will be done automatically.
+    \nClick "Ok" to start drawing</string>
+
 
 </resources>

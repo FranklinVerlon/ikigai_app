@@ -36,12 +36,25 @@ public class ActivityPaintFragmentManual extends Fragment {
     //para acesso ao armazenamento externo
     private static final int SAVE_IMAGE_PERMISSION_REQUEST_CODE = 1;
 
+    private android.app.AlertDialog alerta;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_paint_manual, container, false);
         setHasOptionsMenu(true);
+
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getContext());
+        builder.setMessage(getResources().getString(R.string.information))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                    }
+                });
+        alerta = builder.create();
+        alerta.show();
 
         doodleView = v.findViewById(R.id.doodleViewManual);
         //aceleração atual
