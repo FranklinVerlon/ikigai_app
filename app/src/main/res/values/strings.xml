@@ -31,6 +31,15 @@
     <string name="title_color_dialog">Choose  Color</string>
     <string name="title_line_width_dialog">Choose Line Width</string>
 
+    <string name="needs">NEEDS</string>
+    <string name="good">GOOD AT</string>
+    <string name="love">Love</string>
+    <string name="paid">PAID FOR</string>
+    <string name="passion">Passion</string>
+    <string name="mission">Mission</string>
+    <string name="profession">Profession</string>
+    <string name="vocation">Vacation</string>
+
     <string name="isIkigai">is an Ikigai</string>
     <string name="isNotIkigai1">It is not an ikigai. Because has no intersection between the circle </string>
     <string name="isNotIkigai2">and circle </string>

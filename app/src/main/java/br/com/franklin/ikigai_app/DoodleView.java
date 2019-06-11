@@ -29,6 +29,9 @@ public class DoodleView extends View {
     private final Map<Integer, Path> pathMap = new HashMap<>(); //mapa dos paths atualmente sendo desenhados
     private final  Map <Integer, Point> previousPointMap = new HashMap<>(); //mapa que armazena o último ponto em cada path
     public Point point;
+    String text1= getResources().getString(R.string.love),text2 = getResources().getString(R.string.good),text3 =getResources().getString(R.string.paid),
+            text4=getResources().getString(R.string.needs),text5 = getResources().getString(R.string.passion),text6 = getResources().getString(R.string.mission),
+            text7=getResources().getString(R.string.profession),text8=getResources().getString(R.string.vocation);
 
     ArrayList<Path> paths = new ArrayList<Path>();
     private  int choice;
@@ -104,29 +107,29 @@ public class DoodleView extends View {
 
         compositeCanvas.drawCircle(x / 2 , y / 2 - 200, 300, setColorPaint(paint));
         compositeCanvas.drawText("What you", x/2 - 60, y/ 2 - 400, paintPincel2);
-        compositeCanvas.drawText("LOVE", x/2 - 60, y/ 2 - 350, paintPincel);
+        compositeCanvas.drawText(text1, x/2 - 60, y/ 2 - 350, paintPincel);
 
 
         paint.setXfermode(new PorterDuffXfermode(mode));
 
         compositeCanvas.drawCircle(x / 2 , y / 2 + 200, 300, setColorPaint(paint));
         compositeCanvas.drawText("What you can be", x/2 - 80, y/ 2 + 350, paintPincel2);
-        compositeCanvas.drawText("PAID FOR", x/2 - 80, y/ 2 + 400, paintPincel);
+        compositeCanvas.drawText(text3, x/2 - 80, y/ 2 + 400, paintPincel);
 
 
         compositeCanvas.drawCircle(x / 2 - 200, y / 2, 300, setColorPaint(paint));
         compositeCanvas.drawText("what you are", x/2 - 480, y/ 2 - 50, paintPincel2);
-        compositeCanvas.drawText("GOOD AT", x/2 - 480, y/ 2, paintPincel);
+        compositeCanvas.drawText(text2, x/2 - 480, y/ 2, paintPincel);
 
 
         compositeCanvas.drawCircle(x / 2 + 200, y / 2, 300, setColorPaint(paint));
         compositeCanvas.drawText("What the world", x/2 + 300, y/ 2 - 50, paintPincel2);
-        compositeCanvas.drawText("NEEDS", x/2 + 300, y/ 2, paintPincel);
+        compositeCanvas.drawText(text4, x/2 + 300, y/ 2, paintPincel);
 
-        compositeCanvas.drawText("Mission", x/2 + 80, y/ 2 - 150, paintPincel);
-        compositeCanvas.drawText("Passion", x/2 - 280, y/ 2 - 150, paintPincel);
-        compositeCanvas.drawText("Vacation", x/2 + 90, y/ 2 + 180 , paintPincel);
-        compositeCanvas.drawText("Profession", x/2 - 300, y/ 2 + 180, paintPincel);
+        compositeCanvas.drawText(text6, x/2 + 80, y/ 2 - 150, paintPincel);
+        compositeCanvas.drawText(text5, x/2 - 280, y/ 2 - 150, paintPincel);
+        compositeCanvas.drawText(text8, x/2 + 90, y/ 2 + 180 , paintPincel);
+        compositeCanvas.drawText(text7, x/2 - 300, y/ 2 + 180, paintPincel);
 
         canvas.drawBitmap(compositeBitmap, 0, 0, null);
 
